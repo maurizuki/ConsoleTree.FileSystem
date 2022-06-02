@@ -1,4 +1,4 @@
-# ConsoleTree.FileSystem.FileSystem
+# ConsoleTree.FileSystem
 
 [![language](https://img.shields.io/github/languages/top/maurizuki/ConsoleTree.FileSystem)](https://github.com/maurizuki/ConsoleTree.FileSystem)
 [![issues](https://img.shields.io/github/issues/maurizuki/ConsoleTree.FileSystem)](https://github.com/maurizuki/ConsoleTree.FileSystem/issues)
