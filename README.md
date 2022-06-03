@@ -55,4 +55,4 @@ Tree.Write(new FileSystemNode(docsDirectory, new SearchSettings
 
 ## Resources
 
-See the [API reference](./docs/ConsoleTree.FileSystem.md) and the [ConsoleTree.FileSystem.Demo](./src/ConsoleTree.FileSystem.Demo) application for further informations. Se also the [ConsoleTree API reference](https://github.com/maurizuki/ConsoleTree/blob/main/docs/ConsoleTree.md) to learn how to customize indentation, maximum depth, type of connectors and colors.
+See the [API reference](./docs/ConsoleTree.FileSystem.md) and the [ConsoleTree.FileSystem.Demo](./src/ConsoleTree.FileSystem.Demo) application for further informations. See also the [ConsoleTree API reference](https://github.com/maurizuki/ConsoleTree/blob/main/docs/ConsoleTree.md) to learn how to customize indentation, maximum depth, type of connectors and colors.
