@@ -9,7 +9,7 @@
     <Description>A tool to write the directory tree to the console standard output stream, with colors support and a lot of customization options.</Description>
     <PackageTags>cli;console;tree;file system;file;directory</PackageTags>
     <Version>1.0.0</Version>
-    <Copyright>© 2022 Maurizio Basaglia</Copyright>
+    <Copyright>© 2022+ Maurizio Basaglia</Copyright>
     <PackageProjectUrl>https://github.com/maurizuki/ConsoleTree.FileSystem</PackageProjectUrl>
     <RepositoryUrl>https://github.com/maurizuki/ConsoleTree.FileSystem</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
