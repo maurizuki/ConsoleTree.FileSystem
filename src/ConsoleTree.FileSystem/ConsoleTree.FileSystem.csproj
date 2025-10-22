@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConsoleTree" Version="1.0.0" />
+    <PackageReference Include="ConsoleTree" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
