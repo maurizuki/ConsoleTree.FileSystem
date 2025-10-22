@@ -25,32 +25,31 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace ConsoleTree.FileSystem
+namespace ConsoleTree.FileSystem;
+
+/// <summary>
+///     Represents a comparison operation between two objects of type <c>FileSystemInfo</c> that makes directories come
+///     first.
+/// </summary>
+public class DirectoriesFirstComparer : Comparer<FileSystemInfo>
 {
 	/// <summary>
-	///     Represents a comparison operation between two objects of type <c>FileSystemInfo</c> that makes directories come
-	///     first.
+	///     Performs a comparison of two objects of type <c>FileSystemInfo</c> and returns a value indicating whether one
+	///     object is less than, equal to, or greater than the other.
 	/// </summary>
-	public class DirectoriesFirstComparer : Comparer<FileSystemInfo>
+	/// <param name="x">The first object to compare.</param>
+	/// <param name="y">The second object to compare.</param>
+	/// <returns>
+	///     A signed integer that is less than zero if <c>x</c> is less than <c>y</c>, zero if <c>x</c> equals <c>y</c>,
+	///     greater than zero if <c>x</c> is greater than <c>y</c>.
+	/// </returns>
+	public override int Compare(FileSystemInfo x, FileSystemInfo y)
 	{
-		/// <summary>
-		///     Performs a comparison of two objects of type <c>FileSystemInfo</c> and returns a value indicating whether one
-		///     object is less than, equal to, or greater than the other.
-		/// </summary>
-		/// <param name="x">The first object to compare.</param>
-		/// <param name="y">The second object to compare.</param>
-		/// <returns>
-		///     A signed integer that is less than zero if <c>x</c> is less than <c>y</c>, zero if <c>x</c> equals <c>y</c>,
-		///     greater than zero if <c>x</c> is greater than <c>y</c>.
-		/// </returns>
-		public override int Compare(FileSystemInfo x, FileSystemInfo y)
+		if ((x?.Attributes & FileAttributes.Directory) == (y?.Attributes & FileAttributes.Directory))
 		{
-			if ((x?.Attributes & FileAttributes.Directory) == (y?.Attributes & FileAttributes.Directory))
-			{
-				return string.Compare(x?.Name, y?.Name, StringComparison.InvariantCulture);
-			}
-
-			return (x?.Attributes & FileAttributes.Directory) == FileAttributes.Directory ? -1 : 1;
+			return string.Compare(x?.Name, y?.Name, StringComparison.InvariantCulture);
 		}
+
+		return (x?.Attributes & FileAttributes.Directory) == FileAttributes.Directory ? -1 : 1;
 	}
 }

@@ -24,21 +24,20 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ConsoleTree.FileSystem
+namespace ConsoleTree.FileSystem;
+
+/// <summary>
+///     Specifies the settings to use to look for files and directories.
+/// </summary>
+public class SearchSettings
 {
 	/// <summary>
-	///     Specifies the settings to use to look for files and directories.
+	///     Gets or sets a value indicating whether to include files in search.
 	/// </summary>
-	public class SearchSettings
-	{
-		/// <summary>
-		///     Gets or sets a value indicating whether to include files in search.
-		/// </summary>
-		public bool IncludeFiles { get; set; }
+	public bool IncludeFiles { get; set; }
 
-		/// <summary>
-		///     Gets or sets an <c>IComparer&lt;FileSystemInfo&gt;</c> implementation used to sort files and directories.
-		/// </summary>
-		public IComparer<FileSystemInfo> Comparer { get; set; }
-	}
+	/// <summary>
+	///     Gets or sets an <c>IComparer&lt;FileSystemInfo&gt;</c> implementation used to sort files and directories.
+	/// </summary>
+	public IComparer<FileSystemInfo> Comparer { get; set; }
 }
