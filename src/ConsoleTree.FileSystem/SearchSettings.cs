@@ -34,10 +34,12 @@ public class SearchSettings
 	/// <summary>
 	///     Gets or sets a value indicating whether to include files in search.
 	/// </summary>
+	/// <returns>A value indicating whether to include files in search.</returns>
 	public bool IncludeFiles { get; set; }
 
 	/// <summary>
-	///     Gets or sets an <c>IComparer&lt;FileSystemInfo&gt;</c> implementation used to sort files and directories.
+	///     Gets or sets an IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories.
 	/// </summary>
+	/// <returns>An IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories.</returns>
 	public IComparer<FileSystemInfo> Comparer { get; set; }
 }

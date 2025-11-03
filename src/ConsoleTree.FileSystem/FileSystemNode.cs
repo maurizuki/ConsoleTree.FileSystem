@@ -36,8 +36,9 @@ public class FileSystemNode : ITreeNode
 	private readonly SearchSettings _searchSettings;
 
 	/// <summary>
-	///     Gets the <c>FileSystemInfo</c> relative to the node of the file system tree structure.
+	///     Gets the FileSystemInfo relative to the node of the file system tree structure.
 	/// </summary>
+	/// <returns>The FileSystemInfo relative to the node of the file system tree structure.</returns>
 	public FileSystemInfo FileSystemInfo { get; }
 
 	private FileSystemNode(FileSystemInfo fileSystemInfo, SearchSettings settings)
@@ -51,21 +52,21 @@ public class FileSystemNode : ITreeNode
 	/// </summary>
 	/// <param name="directoryPath">A string specifying the directory path on which to create the new instance.</param>
 	/// <param name="settings">The <see cref="SearchSettings" /> used to look for files and subdirectories.</param>
-	/// <exception cref="ArgumentNullException"><c>directoryPath</c> is <c>null</c>.</exception>
+	/// <exception cref="ArgumentNullException"><paramref name="directoryPath" /> is <c>null</c>.</exception>
 	public FileSystemNode(string directoryPath, SearchSettings settings = null)
-		: this((FileSystemInfo) new DirectoryInfo(directoryPath), settings ?? new SearchSettings())
+		: this((FileSystemInfo)new DirectoryInfo(directoryPath), settings ?? new SearchSettings())
 	{
 		if (directoryPath == null) throw new ArgumentNullException(nameof(directoryPath));
 	}
 
 	/// <summary>
-	///     Initializes a new instance of the <see cref="FileSystemNode" /> class with the specified <c>DirectoryInfo</c>.
+	///     Initializes a new instance of the <see cref="FileSystemNode" /> class with the specified DirectoryInfo.
 	/// </summary>
-	/// <param name="directoryInfo">The <c>DirectoryInfo</c> with which to create the new instance.</param>
+	/// <param name="directoryInfo">The DirectoryInfo with which to create the new instance.</param>
 	/// <param name="settings">The <see cref="SearchSettings" /> used to look for files and subdirectories.</param>
-	/// <exception cref="ArgumentNullException"><c>directoryInfo</c> is <c>null</c>.</exception>
+	/// <exception cref="ArgumentNullException"><paramref name="directoryInfo" /> is <c>null</c>.</exception>
 	public FileSystemNode(DirectoryInfo directoryInfo, SearchSettings settings = null)
-		: this((FileSystemInfo) directoryInfo, settings ?? new SearchSettings())
+		: this((FileSystemInfo)directoryInfo, settings ?? new SearchSettings())
 	{
 		if (directoryInfo == null) throw new ArgumentNullException(nameof(directoryInfo));
 	}

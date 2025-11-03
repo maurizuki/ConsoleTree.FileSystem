@@ -28,20 +28,21 @@ using System.IO;
 namespace ConsoleTree.FileSystem;
 
 /// <summary>
-///     Represents a comparison operation between two objects of type <c>FileSystemInfo</c> that makes directories come
+///     Represents a comparison operation between two objects of type FileSystemInfo that makes directories come
 ///     first.
 /// </summary>
 public class DirectoriesFirstComparer : Comparer<FileSystemInfo>
 {
 	/// <summary>
-	///     Performs a comparison of two objects of type <c>FileSystemInfo</c> and returns a value indicating whether one
+	///     Performs a comparison of two objects of type FileSystemInfo and returns a value indicating whether one
 	///     object is less than, equal to, or greater than the other.
 	/// </summary>
 	/// <param name="x">The first object to compare.</param>
 	/// <param name="y">The second object to compare.</param>
 	/// <returns>
-	///     A signed integer that is less than zero if <c>x</c> is less than <c>y</c>, zero if <c>x</c> equals <c>y</c>,
-	///     greater than zero if <c>x</c> is greater than <c>y</c>.
+	///     A signed integer that is less than zero if <paramref name="x" /> is less than <paramref name="y" />, zero if
+	///     <paramref name="x" /> equals <paramref name="y" />, greater than zero if <paramref name="x" /> is greater than
+	///     <paramref name="y" />.
 	/// </returns>
 	public override int Compare(FileSystemInfo x, FileSystemInfo y)
 	{
