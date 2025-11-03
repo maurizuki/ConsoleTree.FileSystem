@@ -6,6 +6,10 @@ Gets or sets a value indicating whether to include files in search.
 public bool IncludeFiles { get; set; }
 ```
 
+## Return Value
+
+A value indicating whether to include files in search.
+
 ## See Also
 
 * class [SearchSettings](../SearchSettings.md)

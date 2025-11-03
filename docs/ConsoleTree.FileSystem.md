@@ -4,7 +4,7 @@
 
 | public type | description |
 | --- | --- |
-| class [DirectoriesFirstComparer](./ConsoleTree.FileSystem/DirectoriesFirstComparer.md) | Represents a comparison operation between two objects of type `FileSystemInfo` that makes directories come first. |
+| class [DirectoriesFirstComparer](./ConsoleTree.FileSystem/DirectoriesFirstComparer.md) | Represents a comparison operation between two objects of type FileSystemInfo that makes directories come first. |
 | class [FileSystemNode](./ConsoleTree.FileSystem/FileSystemNode.md) | Represents a node of the file system tree structure. |
 | class [SearchSettings](./ConsoleTree.FileSystem/SearchSettings.md) | Specifies the settings to use to look for files and directories. |
 

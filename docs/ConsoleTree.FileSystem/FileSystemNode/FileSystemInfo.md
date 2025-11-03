@@ -1,10 +1,14 @@
 # FileSystemNode.FileSystemInfo property
 
-Gets the `FileSystemInfo` relative to the node of the file system tree structure.
+Gets the FileSystemInfo relative to the node of the file system tree structure.
 
 ```csharp
 public FileSystemInfo FileSystemInfo { get; }
 ```
+
+## Return Value
+
+The FileSystemInfo relative to the node of the file system tree structure.
 
 ## See Also
 

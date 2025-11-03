@@ -1,6 +1,6 @@
 # DirectoriesFirstComparer.Compare method
 
-Performs a comparison of two objects of type `FileSystemInfo` and returns a value indicating whether one object is less than, equal to, or greater than the other.
+Performs a comparison of two objects of type FileSystemInfo and returns a value indicating whether one object is less than, equal to, or greater than the other.
 
 ```csharp
 public override int Compare(FileSystemInfo x, FileSystemInfo y)
@@ -13,7 +13,7 @@ public override int Compare(FileSystemInfo x, FileSystemInfo y)
 
 ## Return Value
 
-A signed integer that is less than zero if `x` is less than `y`, zero if `x` equals `y`, greater than zero if `x` is greater than `y`.
+A signed integer that is less than zero if *x* is less than *y*, zero if *x* equals *y*, greater than zero if *x* is greater than *y*.
 
 ## See Also
 

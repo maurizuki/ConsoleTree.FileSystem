@@ -11,7 +11,7 @@ public class SearchSettings
 | name | description |
 | --- | --- |
 | [SearchSettings](SearchSettings/SearchSettings.md)() | The default constructor. |
-| [Comparer](SearchSettings/Comparer.md) { get; set; } | Gets or sets an `IComparer<FileSystemInfo>` implementation used to sort files and directories. |
+| [Comparer](SearchSettings/Comparer.md) { get; set; } | Gets or sets an IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories. |
 | [IncludeFiles](SearchSettings/IncludeFiles.md) { get; set; } | Gets or sets a value indicating whether to include files in search. |
 
 ## See Also

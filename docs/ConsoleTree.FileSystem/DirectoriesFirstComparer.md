@@ -1,6 +1,6 @@
 # DirectoriesFirstComparer class
 
-Represents a comparison operation between two objects of type `FileSystemInfo` that makes directories come first.
+Represents a comparison operation between two objects of type FileSystemInfo that makes directories come first.
 
 ```csharp
 public class DirectoriesFirstComparer : Comparer<FileSystemInfo>
@@ -11,7 +11,7 @@ public class DirectoriesFirstComparer : Comparer<FileSystemInfo>
 | name | description |
 | --- | --- |
 | [DirectoriesFirstComparer](DirectoriesFirstComparer/DirectoriesFirstComparer.md)() | The default constructor. |
-| override [Compare](DirectoriesFirstComparer/Compare.md)(…) | Performs a comparison of two objects of type `FileSystemInfo` and returns a value indicating whether one object is less than, equal to, or greater than the other. |
+| override [Compare](DirectoriesFirstComparer/Compare.md)(…) | Performs a comparison of two objects of type FileSystemInfo and returns a value indicating whether one object is less than, equal to, or greater than the other. |
 
 ## See Also
 

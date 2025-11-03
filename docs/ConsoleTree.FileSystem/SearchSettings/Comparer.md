@@ -1,10 +1,14 @@
 # SearchSettings.Comparer property
 
-Gets or sets an `IComparer<FileSystemInfo>` implementation used to sort files and directories.
+Gets or sets an IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories.
 
 ```csharp
 public IComparer<FileSystemInfo> Comparer { get; set; }
 ```
+
+## Return Value
+
+An IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories.
 
 ## See Also
 

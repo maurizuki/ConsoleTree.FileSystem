@@ -1,6 +1,6 @@
 # FileSystemNode constructor (1 of 2)
 
-Initializes a new instance of the [`FileSystemNode`](../FileSystemNode.md) class with the specified `DirectoryInfo`.
+Initializes a new instance of the [`FileSystemNode`](../FileSystemNode.md) class with the specified DirectoryInfo.
 
 ```csharp
 public FileSystemNode(DirectoryInfo directoryInfo, SearchSettings settings = null)
@@ -8,14 +8,14 @@ public FileSystemNode(DirectoryInfo directoryInfo, SearchSettings settings = nul
 
 | parameter | description |
 | --- | --- |
-| directoryInfo | The `DirectoryInfo` with which to create the new instance. |
+| directoryInfo | The DirectoryInfo with which to create the new instance. |
 | settings | The [`SearchSettings`](../SearchSettings.md) used to look for files and subdirectories. |
 
 ## Exceptions
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | `directoryInfo` is `null`. |
+| ArgumentNullException | *directoryInfo* is `null`. |
 
 ## See Also
 
@@ -42,7 +42,7 @@ public FileSystemNode(string directoryPath, SearchSettings settings = null)
 
 | exception | condition |
 | --- | --- |
-| ArgumentNullException | `directoryPath` is `null`. |
+| ArgumentNullException | *directoryPath* is `null`. |
 
 ## See Also
 
