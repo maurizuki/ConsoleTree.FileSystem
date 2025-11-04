@@ -28,16 +28,40 @@ var settings = new SearchSettings();
 
 if (args.Length >= 1)
 {
-	if (args.Skip(1).Contains("-d", StringComparer.InvariantCultureIgnoreCase))
+	var options = args.Skip(1).ToArray();
+
+	if (HasOption("-d"))
 	{
 		settings.Comparer = new DirectoriesFirstComparer();
 	}
 
-	settings.IncludeFiles = args.Skip(1).Contains("-f", StringComparer.InvariantCultureIgnoreCase);
+	settings.IncludeFiles = HasOption("-f");
+
+	var skipAttributes = FileAttributes.None;
+
+	if (!HasOption("-h"))
+	{
+		skipAttributes |= FileAttributes.Hidden;
+	}
+
+	if (!HasOption("-s"))
+	{
+		skipAttributes |= FileAttributes.System;
+	}
+
+	if (skipAttributes != FileAttributes.None) 
+	{
+		settings.Predicate = fsi => (fsi.Attributes & skipAttributes) == FileAttributes.None;
+	}
 
 	Tree.Write(new FileSystemNode(args[0], settings), new DisplaySettings {IndentSize = 2});
 
 	return;
+
+	bool HasOption(string option)
+	{
+		return options.Contains(option, StringComparer.InvariantCultureIgnoreCase);
+	}
 }
 
 Console.WriteLine($"Usage: {AppDomain.CurrentDomain.FriendlyName} <directory_path> [<options>]");
@@ -46,3 +70,5 @@ Console.WriteLine("Where <options> are:");
 Console.WriteLine();
 Console.WriteLine("-d    Sort directories first.");
 Console.WriteLine("-f    Include files in search.");
+Console.WriteLine("-h    Include hidden files and directories in search.");
+Console.WriteLine("-s    Include system files and directories in search.");

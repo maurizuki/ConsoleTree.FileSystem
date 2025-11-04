@@ -77,11 +77,16 @@ public class FileSystemNode : ITreeNode
 	/// <returns>A collection of the subnodes of the node.</returns>
 	public IEnumerable<ITreeNode> GetNodes()
 	{
-		if (FileSystemInfo is not DirectoryInfo directoryInfo) return Enumerable.Empty<ITreeNode>();
+		if (FileSystemInfo is not DirectoryInfo directoryInfo) return [];
 
 		var fileSystemInfos = _searchSettings.IncludeFiles
 			? directoryInfo.EnumerateFileSystemInfos()
 			: directoryInfo.EnumerateDirectories();
+
+		if (_searchSettings.Predicate != null)
+		{
+			fileSystemInfos = fileSystemInfos.Where(_searchSettings.Predicate);
+		}
 
 		if (_searchSettings.Comparer != null)
 		{

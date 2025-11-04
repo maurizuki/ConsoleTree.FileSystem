@@ -21,6 +21,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -36,6 +37,12 @@ public class SearchSettings
 	/// </summary>
 	/// <returns>A value indicating whether to include files in search.</returns>
 	public bool IncludeFiles { get; set; }
+
+	/// <summary>
+	/// Gets or sets a function to test if a file or directory must be included in search.
+	/// </summary>
+	/// <returns>A function to test if a file or directory must be included in search.</returns>
+	public Func<FileSystemInfo, bool> Predicate { get; set; }
 
 	/// <summary>
 	///     Gets or sets an IComparer&lt;FileSystemInfo&gt; implementation used to sort files and directories.
