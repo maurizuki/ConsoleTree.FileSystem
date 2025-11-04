@@ -7,8 +7,8 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Maurizio Basaglia</Authors>
     <Description>A tool to write the directory tree to the console standard output stream, with colors support and a lot of customization options.</Description>
-    <PackageTags>cli;console;tree;file system;file;directory</PackageTags>
-    <Version>1.0.0</Version>
+    <PackageTags>cli console console-app console-application tree tree-structure file-system file directory</PackageTags>
+    <Version>1.1.0</Version>
     <Copyright>© 2022+ Maurizio Basaglia</Copyright>
     <PackageProjectUrl>https://github.com/maurizuki/ConsoleTree.FileSystem</PackageProjectUrl>
     <RepositoryUrl>https://github.com/maurizuki/ConsoleTree.FileSystem</RepositoryUrl>
@@ -20,6 +20,7 @@
     <Title>ConsoleTree.FileSystem</Title>
     <Product>ConsoleTree.FileSystem</Product>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageReleaseNotes>Added an option to filter files and directories using a delegate function.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

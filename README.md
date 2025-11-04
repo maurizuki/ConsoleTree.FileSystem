@@ -19,15 +19,16 @@ Install-Package ConsoleTree.FileSystem
 More options are available on the [ConsoleTree.FileSystem page](https://www.nuget.org/packages/ConsoleTree.FileSystem) of the NuGet Gallery website.
 
 ## Usage
-Instantiate a ```FileSystemNode``` specifying the root directory and, optionally, if files must be included and a sort order. To write the directory tree to the console standard output stream, call the ```ConsoleTree.Tree.Write``` method specifying the ```FileSystemNode``` instance as parameter.
+Instantiate a ```FileSystemNode``` specifying the root directory and, optionally, if files must be included, a function to filter them and a sort order. To write the directory tree to the console standard output stream, call the ```ConsoleTree.Tree.Write``` method specifying the ```FileSystemNode``` instance as parameter.
 
 ```csharp
 using ConsoleTree;
 using ConsoleTree.FileSystem;
 
-Tree.Write(new FileSystemNode(docsDirectory, new SearchSettings
+Tree.Write(new FileSystemNode("docs", new SearchSettings
 {
     IncludeFiles = true,
+    Predicate = fsi => !fsi.Attributes.HasFlag(FileAttributes.Hidden),
     Comparer = new DirectoriesFirstComparer()
 }), new DisplaySettings {IndentSize = 2});
 
@@ -46,6 +47,7 @@ Tree.Write(new FileSystemNode(docsDirectory, new SearchSettings
 // │  ├──SearchSettings\
 // │  │  ├──Comparer.md
 // │  │  ├──IncludeFiles.md
+// │  │  ├──Predicate.md
 // │  │  └──SearchSettings.md
 // │  ├──DirectoriesFirstComparer.md
 // │  ├──FileSystemNode.md
