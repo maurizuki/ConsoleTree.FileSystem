@@ -1,9 +1,6 @@
 # ConsoleTree.FileSystem
 
-[![language](https://img.shields.io/github/languages/top/maurizuki/ConsoleTree.FileSystem)](https://github.com/maurizuki/ConsoleTree.FileSystem)
-[![issues](https://img.shields.io/github/issues/maurizuki/ConsoleTree.FileSystem)](https://github.com/maurizuki/ConsoleTree.FileSystem/issues)
 [![version](https://img.shields.io/nuget/v/ConsoleTree.FileSystem)](https://www.nuget.org/packages/ConsoleTree.FileSystem)
-[![release](https://img.shields.io/github/release-date/maurizuki/ConsoleTree.FileSystem)](https://github.com/maurizuki/ConsoleTree.FileSystem/releases/latest)
 [![downloads](https://img.shields.io/nuget/dt/ConsoleTree.FileSystem)](https://www.nuget.org/packages/ConsoleTree.FileSystem)
 
 A tool to write the directory tree to the console standard output stream, with colors support and a lot of customization options.
